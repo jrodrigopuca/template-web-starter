@@ -5,11 +5,12 @@
 ## TO-DO
 - [x] base HAML
 - [x] base SCSS
-- [ ] Opciones pre-procesadores
-- [ ] Links actualizables por API(?)
+- [ ] Opciones para generar HTML/CSS
+- [ ] Links actualizables por API(?)--> No es recomendable
 - [ ] Agregar analytics
-- [ ] json con detalles (info.json)
-- [ ] paleta de colores
+- [ ] Bootstrap4
+- [x] variables con detalles
+- [ ] combinaciones de colores en SCSS
 - [x] generar secciones con array en Ruby
 - [ ] agregar opciones para deploy
 

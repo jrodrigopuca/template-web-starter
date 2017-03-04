@@ -1,0 +1,12 @@
+# Results
+*.html
+*.css
+*.js
+
+#Prepros file
+prepros-6.config
+
+#img
+./img
+
+styles.css
