@@ -7,10 +7,9 @@
 
 -@BootstrapV= "4.0.0-alpha.6"
 -@TetherV="1.4.0"
-
+-@NormalizeV="5.0.0"
 -@FlexboxGridV="6.3.1"
 -@jQueryV="3.1.1"
--@ModernizrV="2.8.3"
 
 -menu =["section-1", "section-2", "section-3", "section-n"]
 
@@ -29,10 +28,13 @@
         /styles
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/"+@FlexboxGridV+"/flexboxgrid.css"}
+        %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
         %link{rel:"stylesheet",href:"styles.css"}
     %body
+        /navbar
         %nav.navbar.navbar-toggleable.navbar-light.bg-faded
-            %button.navbar-toggler.navbar-toggler-right{type:"button", 'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
+            %button.navbar-toggler.navbar-toggler-right{type:"button",
+            'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
                 %span.navbar-toggler-icon
             %a.navbar-brand{href:"#"}= @title
             .collapse.navbar-collapse#MyNavbar
@@ -44,10 +46,11 @@
         -menu.each do |item|
             .row.center-xs.full{id:"#{item}"}
                 .box
-                    %p= item
+                    %h1= item
 
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
-        /%script{src:"https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
-        %script{src:"main.js"}
+        %script{src:"js/analytics.js"}
+        %script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
+        %script{src:"js/main.js"}

@@ -7,9 +7,10 @@
 - [x] base SCSS
 - [ ] Opciones para generar HTML/CSS
 - [ ] Links actualizables por API(?)--> No es recomendable
-- [ ] Agregar analytics
-- [ ] Bootstrap4
+- [x] Agregar analytics
+- [x] Bootstrap4
 - [x] variables con detalles
+- [ ] Parallax
 - [ ] combinaciones de colores en SCSS
 - [x] generar secciones con array en Ruby
 - [ ] agregar opciones para deploy
@@ -22,3 +23,17 @@
 [cdnjs API](https://cdnjs.com/api)
 
 [html5-boilerplate](https://github.com/h5bp/html5-boilerplate/tree/master/src)
+
+[Google Analytics](https://developers.google.com/analytics/devguides/collection/analyticsjs/)
+
+[HAML Reference](http://haml.info/docs/yardoc/file.REFERENCE.html#javascript-filter)
+
+https://ihatetomatoes.net/how-to-create-a-parallax-scrolling-website/
+
+https://www.w3schools.com/howto/howto_css_parallax.asp
+
+http://pixelcog.github.io/parallax.js/
+
+https://github.com/wagerfield/parallax
+
+http://urban-walks.com/#tours
