@@ -1,3 +1,19 @@
+//primary color
+$dark-primary-color:#303f9f;
+$primary-color:#3f51b5;
+$light-primary-color:#c5cae9;
+$text-color:#FFFFFF;
+
+//Accent color
+$accent-color:#ff5252;
+$primary-text-color:#212121;
+$secondary-text-color:#757575;
+$divider-color:#BDBDBD;
+
+$body-color:#FAFAFA;
+
+//Obtain combinations --> https://www.materialpalette.com/indigo/red
+
 
 //======== Basic ==============
 html {
@@ -8,6 +24,7 @@ html {
 html,body{
   height: 100%;
 }
+
 
 //======== Dimensions ============
 
@@ -40,10 +57,31 @@ html,body{
 }
 
 //============Colors
-.c-primary{
- 
+.jumbotron{
+    background-color: $primary-color;
+    color: $text-color;
 }
 
-.c-secundary{
-
+section{
+    border-bottom: 3px solid;
+    border-color:$divider-color;
+    padding-top: 30px; //use this for navbar fixed
 }
+
+.navbar{
+    background-color: $dark-primary-color;
+    .nav-item{
+        color:$text-color;
+        opacity: 0.7;
+        border-bottom: 3px solid;
+        margin: 1px;
+
+    }
+    .nav-item:focus, .nav-item:hover{
+        border-bottom: 3px solid;
+        color:$text-color;
+        transition: all 0.1s;
+        opacity: 1;
+    }
+
+} 

@@ -1,7 +1,7 @@
--@autor="My_name"
+-@autor="My_name" # Replace
 -@lang= "en"
--@title= "My_title"
--@description= "My_Description"
+-@title= "Hello World!"
+-@description= "My awesome website!"
 -@keywords="keyword1, keyword2, keywordn"
 
 
@@ -32,18 +32,17 @@
         %link{rel:"stylesheet",href:"./css/styles.css"}
     %body
         /NavBar
-        %nav.navbar.navbar-toggleable.navbar-light.bg-faded
-            %button.navbar-toggler.navbar-toggler-right{type:"button",
-            'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
-                %span.navbar-toggler-icon
+        %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top 
             %a.navbar-brand{href:"#"}= @title
+            %button.navbar-toggler.navbar-toggler-right{type:"button",'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
+                %span.navbar-toggler-icon
             .collapse.navbar-collapse#MyNavbar
                 .navbar-nav
                     -menu.each do |item|
                         %a.nav-item.nav-link{href:'#'+"#{item}"}= item
-        .jumbotron.text-center
-            %h1.display-2 Hello World! 
-            %p.lead My awesome website!  
+        %header.jumbotron.jumbotron-fluid.text-center
+            %h1.display-2= @title 
+            %p.lead= @description
 
         /Sections
         -# Replace with your own sections
