@@ -25,13 +25,13 @@
         %meta{name:"author", content:@autor}
         %meta{name:"viewport", content:"width=device-width, initial-scale=1, shrink-to-fit=no"}
 
-        /styles
+        /Styles
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
-        %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/"+@FlexboxGridV+"/flexboxgrid.css"}
+        /%link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/"+@FlexboxGridV+"/flexboxgrid.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
-        %link{rel:"stylesheet",href:"styles.css"}
+        %link{rel:"stylesheet",href:"./css/styles.css"}
     %body
-        /navbar
+        /NavBar
         %nav.navbar.navbar-toggleable.navbar-light.bg-faded
             %button.navbar-toggler.navbar-toggler-right{type:"button",
             'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
@@ -41,16 +41,21 @@
                 .navbar-nav
                     -menu.each do |item|
                         %a.nav-item.nav-link{href:'#'+"#{item}"}= item
+        .jumbotron.text-center
+            %h1.display-2 Hello World! 
+            %p.lead My awesome website!  
 
-        /Secciones
+        /Sections
+        -# Replace with your own sections
         -menu.each do |item|
-            .row.center-xs.full{id:"#{item}"}
+            %section.text-center.full{id:"#{item}"}
                 .box
-                    %h1= item
+                    %h1.display-4= item
+        
 
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
         %script{src:"js/analytics.js"}
         %script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
-        %script{src:"js/main.js"}
+        %script{src:"./js/main.js"}
