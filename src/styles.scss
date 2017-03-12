@@ -45,7 +45,7 @@ html,body{
   margin:0px;
 }
 .up{
-    z-index: 10;
+    z-index: 1000;
 }
 
 //==========Position
@@ -70,6 +70,7 @@ section{
 
 .navbar{
     background-color: $dark-primary-color;
+    transition: all 0.1s;
     .nav-item{
         color:$text-color;
         opacity: 0.7;

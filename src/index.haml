@@ -1,21 +1,24 @@
--@autor="My_name" # Replace
+-# Basic information
+-@autor="jarp" 
 -@lang= "en"
 -@title= "Hello World!"
 -@description= "My awesome website!"
 -@keywords="keyword1, keyword2, keywordn"
 
-
+-# Basic libraries
 -@BootstrapV= "4.0.0-alpha.6"
 -@TetherV="1.4.0"
 -@NormalizeV="5.0.0"
 -@FlexboxGridV="6.3.1"
 -@jQueryV="3.1.1"
 
+-# Basic nav items/sections
 -menu =["section-1", "section-2", "section-3", "section-n"]
 
 !!!5
 %html
     %head{class:"no-js",lang:@lang}
+
         /Metadata
         %meta{charset:"utf-8"}
         %meta{'http-equiv':"x-ua-compatible", content:"ie-edge"}
@@ -27,10 +30,11 @@
 
         /Styles
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
-        /%link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/"+@FlexboxGridV+"/flexboxgrid.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
         %link{rel:"stylesheet",href:"./css/styles.css"}
+ 
     %body
+
         /NavBar
         %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top 
             %a.navbar-brand{href:"#"}= @title
@@ -40,7 +44,8 @@
                 .navbar-nav
                     -menu.each do |item|
                         %a.nav-item.nav-link{href:'#'+"#{item}"}= item
-        %header.jumbotron.jumbotron-fluid.text-center
+        /Jumbotron
+        .jumbotron.jumbotron-fluid.text-center
             %h1.display-2= @title 
             %p.lead= @description
 
@@ -50,7 +55,10 @@
             %section.text-center.full{id:"#{item}"}
                 .box
                     %h1.display-4= item
-        
+
+        /Footer
+        %footer.w-100
+            %p.text-center="Develop by "+@autor
 
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
