@@ -1,15 +1,16 @@
+/ Boilerplate HAML/SCSS v0.20
+
 -# Basic information
--@autor="jarp" 
+-@autor="jarp"
 -@lang= "en"
 -@title= "Hello World!"
--@description= "My awesome website!"
+-@description= "My awesome template"
 -@keywords="keyword1, keyword2, keywordn"
 
 -# Basic libraries
 -@BootstrapV= "4.0.0-alpha.6"
 -@TetherV="1.4.0"
 -@NormalizeV="5.0.0"
--@FlexboxGridV="6.3.1"
 -@jQueryV="3.1.1"
 
 -# Basic nav items/sections
@@ -32,11 +33,11 @@
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
         %link{rel:"stylesheet",href:"./css/styles.css"}
- 
+
     %body
 
         /NavBar
-        %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top 
+        %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top
             %a.navbar-brand{href:"#"}= @title
             %button.navbar-toggler.navbar-toggler-right{type:"button",'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
                 %span.navbar-toggler-icon
@@ -45,16 +46,42 @@
                     -menu.each do |item|
                         %a.nav-item.nav-link{href:'#'+"#{item}"}= item
         /Jumbotron
-        .jumbotron.jumbotron-fluid.text-center
-            %h1.display-2= @title 
+        .jumbotron-fluid.text-center
+            %h1.display-2= @title
             %p.lead= @description
 
         /Sections
-        -# Replace with your own sections
+        -# Please replace this with your own sections (this is just an example)
         -menu.each do |item|
-            %section.text-center.full{id:"#{item}"}
-                .box
-                    %h1.display-4= item
+            %section.full.text-center{id:"#{item}"}
+                %h1.display-4= item
+                .content
+                    %h2 sub-title
+                    %p
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae imperdiet nulla.
+                        Donec dapibus et leo in condimentum. Phasellus eu faucibus orci. Maecenas ullamcorper ex in massa porta fermentum.
+                        Sed tempor urna vitae diam accumsan varius. Proin venenatis dolor in mi sodales, sit amet blandit lectus venenatis.
+                        Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id consectetur lacus.
+                    .card
+                        .card-block
+                            %h4.card-title Card title
+                            %p.card-text
+                                Nulla consectetur suscipit venenatis. In hac habitasse platea dictumst. Proin nec ex sit amet dolor venenatis
+                                consectetur in vel ex. Nulla non placerat felis. Phasellus euismod condimentum venenatis. Nullam et fringilla
+                                arcu, eu consequat velit.
+
+        %section.full
+            .card
+                .card-block
+                    %h4.card-title Card title
+                    .card-text
+                        %P
+                            %button.btn.btn-secondary click
+                            %code %button.btn.btn-secondary click
+                        %p
+                            .alert.alert-success{role:"alert"} Alerta
+                            %code  .alert.alert-success{role:"alert"} Alerta
+                    %code jadklsda
 
         /Footer
         %footer.w-100
@@ -63,6 +90,6 @@
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
-        %script{src:"js/analytics.js"}
-        %script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
+        /%script{src:"js/analytics.js"}
+        /%script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
         %script{src:"./js/main.js"}

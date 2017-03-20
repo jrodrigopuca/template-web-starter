@@ -1,6 +1,6 @@
 //======== Fonts ==============
-$familyH: "Alfa Slab One";
-$familyB: "Raleway";
+$familyH: "Alfa Slab One";  //Header font
+$familyB: "Raleway"; //Body font
 
 @function miFuente($nombre){
     $vuelta:"";
@@ -12,7 +12,7 @@ $familyB: "Raleway";
         @else{
             $vuelta: $vuelta + $local;
         }
-    
+
     }
     @return $vuelta;
 }
@@ -44,7 +44,7 @@ $primary-text-color:#212121;
 $secondary-text-color:#757575;
 $divider-color:#BDBDBD;
 
-$body-color:#FAFAFA;
+$body-color:#fafafa;
 
 //Obtain combinations --> https://www.materialpalette.com/indigo/red
 
@@ -64,11 +64,10 @@ html,body{
 //======== Dimensions ============
 
 .full{
-    height: 100%;
     width: 100%;
     min-width: 100%;
     min-height: 100%;
-    overflow: hidden;
+
 }
 .full-height{
     height: 100%;
@@ -92,20 +91,24 @@ html,body{
 }
 
 //============Colors
-.jumbotron{
+.jumbotron-fluid{
     background-color: $primary-color;
     color: $text-color;
+    padding: 9rem 0;
 }
 
 section{
-    border-bottom: 3px solid;
+    border-bottom: 1px solid;
     border-color:$divider-color;
     padding-top: 30px; //use this for navbar fixed
-    h1,h2,h3,h4{
-        color:$primary-text-color;
-    }
-    p{
+    background-color: $body-color;
+    padding: 2em;
+    .container{
         color:$secondary-text-color;
+
+    }
+    h1{
+        color:$dark-primary-color;
     }
 }
 
@@ -127,5 +130,4 @@ section{
     .navbar-brand{
         @extend h1;
     }
-} 
-
+}
