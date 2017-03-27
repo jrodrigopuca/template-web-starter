@@ -1,4 +1,4 @@
-/ Boilerplate HAML/SCSS v0.20
+/ Boilerplate HAML/SCSS v0.21
 
 -# Basic information
 -@autor="jarp"
@@ -39,41 +39,44 @@
         /NavBar
         %nav.navbar.navbar-toggleable.navbar-inverse.fixed-top
             %a.navbar-brand{href:"#"}= @title
-            %button.navbar-toggler.navbar-toggler-right{type:"button",'data-toggle':"collapse", 'data-target':"#MyNavbar", 'aria-controls':"MyNavBar", 'aria-expanded':"true"}
+            %button.navbar-toggler.navbar-toggler-right{type:"button","data":{"toggle":"collapse", "target":"#MyNavbar" },  "aria":{"controls":"MyNavBar", "expanded":"true"}}
                 %span.navbar-toggler-icon
             .collapse.navbar-collapse#MyNavbar
                 .navbar-nav
                     -menu.each do |item|
                         %a.nav-item.nav-link{href:'#'+"#{item}"}= item
-        /Jumbotron
-        .jumbotron-fluid.text-center
+
+        /Header
+        %header.jumbotron-fluid.text-center
             %h1.display-2= @title
             %p.lead= @description
 
-        /Sections
-        -# Please replace this with your own sections (this is just an example)
-        -menu.each do |item|
-            %section.full.text-center{id:"#{item}"}
-                %h1.display-4= item
-                .content
-                    %h2 sub-title
-                    %p
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae imperdiet nulla.
-                        Donec dapibus et leo in condimentum. Phasellus eu faucibus orci. Maecenas ullamcorper ex in massa porta fermentum.
-                        Sed tempor urna vitae diam accumsan varius. Proin venenatis dolor in mi sodales, sit amet blandit lectus venenatis.
-                        Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id consectetur lacus.
-                    .card
-                        .card-block
-                            %h4.card-title Card title
-                            %p.card-text
-                                Nulla consectetur suscipit venenatis. In hac habitasse platea dictumst. Proin nec ex sit amet dolor venenatis
-                                consectetur in vel ex. Nulla non placerat felis. Phasellus euismod condimentum venenatis. Nullam et fringilla
-                                arcu, eu consequat velit.
+        /Main
+        %main
+            -# Please replace this with your own sections (this is just an example)
+            -menu.each do |item|
+                %section.full.text-center{id:"#{item}"}
+                    %h1.display-4= item
+                    .content
+                        %h2 sub-title
+                        %p
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae imperdiet nulla.
+                            Donec dapibus et leo in condimentum. Phasellus eu faucibus orci. Maecenas ullamcorper ex in massa porta fermentum.
+                            Sed tempor urna vitae diam accumsan varius. Proin venenatis dolor in mi sodales, sit amet blandit lectus venenatis.
+                            Duis sagittis laoreet mollis. Morbi imperdiet enim at tortor convallis, id consectetur lacus.
+                        .card
+                            .card-block
+                                %h4.card-title Card title
+                                %p.card-text
+                                    Nulla consectetur suscipit venenatis. In hac habitasse platea dictumst. Proin nec ex sit amet dolor venenatis
+                                    consectetur in vel ex. Nulla non placerat felis. Phasellus euismod condimentum venenatis. Nullam et fringilla
+                                    arcu, eu consequat velit.
 
         /Footer
         %footer.w-100
-            %p.text-center="Develop by "+@autor
+            %p.text-center=@title+" - Develop by "+@autor
 
+        /Scripts
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}

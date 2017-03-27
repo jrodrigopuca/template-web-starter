@@ -56,7 +56,7 @@ html {
 }
 
 html,body{
-    height: 100%;
+    min-height: 100%;
     color:$secondary-text-color;
 }
 
@@ -64,16 +64,18 @@ html,body{
 //======== Dimensions ============
 
 .full{
-    width: 100%;
+    //width: 100%;
+    //height: 100%;
     min-width: 100%;
-    min-height: 100%;
-
+    min-height: 100vh;
 }
 .full-height{
     height: 100%;
+    min-height: 100vh;
 }
 .full-width{
     width: 100%;
+    min-width: 100%;
 }
 .row{
   margin:0px;
@@ -91,27 +93,6 @@ html,body{
 }
 
 //============Colors
-.jumbotron-fluid{
-    background-color: $primary-color;
-    color: $text-color;
-    padding: 9rem 0;
-}
-
-section{
-    border-bottom: 1px solid;
-    border-color:$divider-color;
-    padding-top: 30px; //use this for navbar fixed
-    background-color: $body-color;
-    padding: 2em;
-    .container{
-        color:$secondary-text-color;
-
-    }
-    h1{
-        color:$dark-primary-color;
-    }
-}
-
 .navbar{
     background-color: $dark-primary-color;
     transition: all 0.1s;
@@ -130,4 +111,33 @@ section{
     .navbar-brand{
         @extend h1;
     }
+}
+
+.jumbotron-fluid{
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 9rem 0;
+}
+
+main{
+    min-height: 100vh;
+}
+
+
+section{
+    border-bottom: 1px solid;
+    border-color:$divider-color;
+    background-color: $body-color;
+    padding: 2em; //use this for navbar fixed
+    .container{
+        color:$secondary-text-color;
+    }
+    h1{
+        color:$dark-primary-color;
+    }
+}
+
+
+footer{
+    padding: 1em;
 }
