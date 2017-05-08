@@ -17,14 +17,13 @@ $familyB: "Raleway"; //Body font
     @return $vuelta;
 }
 
+@import url("https://fonts.googleapis.com/css?family=#{miFuente($familyB)}");
 body{
-    @import url("https://fonts.googleapis.com/css?family=#{miFuente($familyB)}");
     font-family: $familyB;
 }
 
-
+@import url("https://fonts.googleapis.com/css?family=#{miFuente($familyH)}");
 h1,h2,h3,h4{
-    @import url("https://fonts.googleapis.com/css?family=#{miFuente($familyH)}");
     font-family: $familyH;
 }
 

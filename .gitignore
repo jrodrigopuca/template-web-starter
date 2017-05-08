@@ -1,7 +1,3 @@
 # Results
-*.html
-*.css
-
-
-
-
+*.sass-cache
+*.css.map

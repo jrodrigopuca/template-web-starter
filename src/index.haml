@@ -1,4 +1,4 @@
-/ Boilerplate HAML/SCSS v0.21
+/ Boilerplate HAML/SCSS v0.22
 
 -# Basic information
 -@autor="jarp"
@@ -12,6 +12,7 @@
 -@TetherV="1.4.0"
 -@NormalizeV="5.0.0"
 -@jQueryV="3.1.1"
+-@FontAwesomeV="4.7.0"
 
 -# Basic nav items/sections
 -menu =["section-1", "section-2", "section-3", "section-n"]
@@ -32,6 +33,7 @@
         /Styles
         %link{rel:"stylesheet",href:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/css/bootstrap.min.css"}
         %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/normalize/"+@NormalizeV+"/normalize.min.css"}
+        %link{rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/"+@FontAwesomeV+"/css/font-awesome.min.css"}
         %link{rel:"stylesheet",href:"./css/styles.css"}
 
     %body
@@ -71,9 +73,10 @@
                                     Nulla consectetur suscipit venenatis. In hac habitasse platea dictumst. Proin nec ex sit amet dolor venenatis
                                     consectetur in vel ex. Nulla non placerat felis. Phasellus euismod condimentum venenatis. Nullam et fringilla
                                     arcu, eu consequat velit.
-
         /Footer
         %footer.w-100
+            = Haml::Engine.new(File.read("./src/layouts/social.haml")).render
+            = Haml::Engine.new(File.read("./src/layouts/legal.haml")).render
             %p.text-center=@title+" - Develop by "+@autor
 
         /Scripts
