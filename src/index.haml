@@ -1,4 +1,4 @@
-/ Boilerplate HAML/SCSS v0.22
+/ Starter template HAML/SCSS v0.02
 
 -# Basic information
 -@autor="jarp"
@@ -75,14 +75,10 @@
                                     arcu, eu consequat velit.
         /Footer
         %footer.w-100
-            = Haml::Engine.new(File.read("./src/layouts/social.haml")).render
-            = Haml::Engine.new(File.read("./src/layouts/legal.haml")).render
             %p.text-center=@title+" - Develop by "+@autor
 
         /Scripts
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/jquery/"+@jQueryV+"/jquery.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/tether/"+@TetherV+"/js/tether.min.js"}
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/"+@BootstrapV+"/js/bootstrap.min.js"}
-        /%script{src:"js/analytics.js"}
-        /%script{async:"true", src:"'https://www.google-analytics.com/analytics.js"}
         %script{src:"./js/main.js"}
