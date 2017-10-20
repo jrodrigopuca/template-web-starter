@@ -5,7 +5,7 @@
 -# Basic information 
 -@author= "jarp"
 -@lang= "en"
--@title= "Hello!"
+-@title= yield_content(:title)
 -@subtitle="Middleman template"
 -@description= "My awesome description"
 -@keywords="keyword1, keyword2, keywordn"
@@ -40,7 +40,7 @@
 
     %body
         =yield
-        %h1= yield_content(:title)
+        %h1= @title
 
 
         
@@ -56,4 +56,5 @@
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.js"}
         -# %script{src:"js/analytics.js"}
         -# %script{async:"true", src:"https://www.google-analytics.com/analytics.js"}
-        -# %script{src:"./js/main.js"}
+        %script{src:"./javascripts/site.js"}
+        %script{src:"./javascripts/scroll.js"}
