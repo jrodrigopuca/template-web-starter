@@ -40,10 +40,8 @@
 
     %body
         =yield
-        %h1= @title
 
-
-        
+        /float button
         .float-block
             %a.btn.waves-circle.btn-rd{href:"#"}
                 %span
@@ -56,5 +54,5 @@
         %script{src:"https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.js"}
         -# %script{src:"js/analytics.js"}
         -# %script{async:"true", src:"https://www.google-analytics.com/analytics.js"}
-        %script{src:"./javascripts/site.js"}
-        %script{src:"./javascripts/scroll.js"}
+        %script{src:"javascripts/scroll.js"}
+        %script{src:"javascripts/site.js"}

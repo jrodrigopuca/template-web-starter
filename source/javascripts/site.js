@@ -1,1 +1,4 @@
-// This is where it all goes :)
+$( document ).ready( ()=> {
+    Waves.init();
+    Waves.attach('.btn', ['waves-button', 'waves-float', 'waves-circle']);
+})
