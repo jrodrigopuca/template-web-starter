@@ -1,15 +1,10 @@
 Starter template using Middleman
 
-$ bundle install
-$ bundle exec middleman server
+<code> $ bundle install </code>
+
+<code> $ bundle exec middleman server </code>
 
 examples partials:
-1) 
-<code>
-=partial "partials/header", :locals => {:title=>"Hello", :subtitle =>"hkjhk"}
-</code>
+1) <code> =partial "partials/header", :locals => {:title=>"Hello", :subtitle =>"hkjhk"}</code>
 
-2)
-<code>
-=partial "partials/header", locals: {title:"Hello", subtitle:"d"}
-</code>
+2) <code> =partial "partials/header", locals: {title:"Hello", subtitle:"d"} </code>
