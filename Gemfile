@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
+
+source "https://rubygems.org"
 
 gem 'haml'
 gem 'sass'
-gem "rack", ">= 2.1.4"
+gem "rack", ">= 3.2"
