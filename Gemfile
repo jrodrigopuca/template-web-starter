@@ -2,6 +2,8 @@
 
 source "https://rubygems.org"
 
-gem 'haml'
-gem 'sass'
+gem 'guard'
+gem 'guard-haml'
+gem 'guard-sass'
+gem 'guard-rack'
 gem "rack", ">= 3.2"
